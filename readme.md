@@ -13,3 +13,11 @@ Backend service for SheildGPT application.
 ### Framework Used
 
 - FastAPI - [Docs Link](https://fastapi.tiangolo.com/)
+
+## Command execution
+
+Ensure you have python **3.13.2** is installed in your system.
+
+### Installing python dependencies
+
+pip install -r requirements.txt
