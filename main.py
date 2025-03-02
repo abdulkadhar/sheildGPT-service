@@ -2,6 +2,7 @@
 from typing import Union, List
 from fastapi import FastAPI, Response, status
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 
 # SECTION Models Section Starts Here
@@ -42,6 +43,13 @@ def isUserPresent(loginData: LoginUserModel) -> bool:
 
 # NOTE Initializing the app
 app = FastAPI()
+
+# SECTION - Origin manipulation
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+)
+#!SECTION
 
 
 # NOTE - Status Route
